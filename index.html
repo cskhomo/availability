@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hackathon Availability</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #meme-container {
+            width: 736px;
+            height: 736px;
+            position: relative;
+        }
+
+        #placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                #dddddd 0%,
+                #cccccc 50%,
+                #dddddd 100%
+            );
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -100% 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+
+        #meme {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Is Chrisser Available for Hackathons??</h1>
+    <div id="meme-container">
+        <div id="placeholder"></div>
+        <img id="meme" src="No.jpeg" alt="No Meme">
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById('placeholder').style.display = 'none';
+            document.getElementById('meme').style.display = 'block';
+        }, 2000);
+    </script>
+</body>
+</html>
