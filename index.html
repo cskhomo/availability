@@ -20,13 +20,13 @@
 
         h1 {
             margin-bottom: 20px;
-            font-size: 5vw; /* scales with screen width */
+            font-size: clamp(1.5rem, 5vw, 3rem); /* Responsive heading */
         }
 
         #meme-container {
             width: 90vw;
             max-width: 736px;
-            aspect-ratio: 1 / 1; /* maintains square shape */
+            aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
             position: relative;
         }
 
